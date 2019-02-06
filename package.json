@@ -1,0 +1,43 @@
+{
+  "name": "css-to-the-rescue-1819",
+  "version": "1.0.0",
+  "description": "_This course is in English_",
+  "private": true,
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0",
+    "sass": "^1.17.0",
+    "webpack": "^4.28.3",
+    "xo": "^0.24.0"
+  },
+  "scripts": {
+    "format": "prettier --write \"src/**/*.js\"",
+    "xo": "xo",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "xo": {
+    "extends": [
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Denniswegereef/css-to-the-rescue-1819.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Denniswegereef/css-to-the-rescue-1819/issues"
+  },
+  "homepage": "https://github.com/Denniswegereef/css-to-the-rescue-1819#readme"
+}
