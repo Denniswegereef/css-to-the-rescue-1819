@@ -67,5 +67,6 @@
     min-height: 100%;
     grid-area: 5 / 5 / 8 / 7;
     @extend %stripes;
+    animation: change-stripe 2s infinite alternate-reverse;
   }
 }

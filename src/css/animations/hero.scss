@@ -9,3 +9,15 @@
     background-color: hotPink;
   }
 }
+
+@keyframes change-stripe {
+  0% {
+    background-position: right 10rem;
+  }
+  50% {
+    background-position: right 0rem bottom 0.4rem;
+  }
+  100% {
+    background-position: left 5rem;
+  }
+}

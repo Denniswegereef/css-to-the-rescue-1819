@@ -5,7 +5,7 @@
   display: grid;
   grid-template: auto 5rem auto 10rem auto / repeat(auto-fit, minmax(0, 1fr));
   column-gap: 1.5em;
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
   &__title {
     font-weight: 500;
     text-align: right;
