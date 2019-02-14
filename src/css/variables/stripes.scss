@@ -1,0 +1,10 @@
+%stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--colorWhiteOpacity),
+    var(--colorWhiteOpacity) 0.3rem,
+    var(--colorBlackOpacity) 0.3rem,
+    var(--colorBlackOpacity) 1rem
+  );
+  transition: all 0.3s;
+}

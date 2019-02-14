@@ -1,0 +1,38 @@
+%menu-animation {
+}
+
+@keyframes menu-hover {
+  0% {
+    content: './Menu item';
+  }
+  10% {
+    content: '- MEnu !tem';
+  }
+  20% {
+    content: 'M enu !t@m- ';
+  }
+  30% {
+    content: 'P enu !tm0';
+  }
+  40% {
+    content: '$ *#&@()';
+  }
+  50% {
+    content: '- XenU !tEm';
+  }
+  60% {
+    content: '-- MMnU @tE m';
+  }
+  70% {
+    content: 'Me!u !tEm';
+  }
+  80% {
+    content: '-M$nu *tEm - -';
+  }
+  90% {
+    content: '- -mm nu *tEm';
+  }
+  100% {
+    content: 'MenU ItEm';
+  }
+}

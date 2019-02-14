@@ -1,0 +1,33 @@
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 4rem auto auto 4rem;
+  margin: 5rem auto;
+  max-width: 60rem;
+  position: relative;
+  &__image {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    background-color: blue;
+    grid-row-start: 1;
+    grid-row-end: 6;
+  }
+
+  &__title {
+    z-index: 5;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  &__text {
+    z-index: 5;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+}

@@ -1,0 +1,11 @@
+@keyframes change-color {
+  0% {
+    background-color: pink;
+  }
+  50% {
+    background-color: var(--mainColor);
+  }
+  100% {
+    background-color: hotPink;
+  }
+}

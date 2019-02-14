@@ -1,0 +1,93 @@
+.header {
+  width: 100%;
+  background-color: peru;
+  height: 70px;
+  &__items {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+  }
+  &__item {
+    padding-right: 20px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    &:hover {
+      cursor: pointer;
+      &:before {
+        animation: textHover 1.2s infinite;
+      }
+    }
+    &:nth-child(1) {
+      &:before {
+        content: 'Home';
+      }
+    }
+    &:nth-child(2) {
+      &:before {
+        content: 'About';
+      }
+    }
+    &:nth-child(3) {
+      &:before {
+        content: 'Portfolio';
+      }
+    }
+    &:nth-child(4) {
+      &:before {
+        content: 'Contact';
+      }
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+@keyframes textHover {
+  0% {
+    content: '.Menu item';
+    color: #ff0000;
+  }
+  10% {
+    content: 'MEnu !tem';
+    color: #ff7f00;
+  }
+  20% {
+    content: 'M enu !t@m';
+    color: #ffff00;
+  }
+  30% {
+    content: 'P enu !tm0';
+    color: #00ff00;
+  }
+  40% {
+    content: 'wtf';
+    color: #0000ff;
+  }
+  50% {
+    content: 'XenU !tEm';
+    color: #8b00ff;
+  }
+  60% {
+    content: 'MMnU @tE m';
+    color: #0000ff;
+  }
+  70% {
+    content: 'Me!u !tEm';
+    color: #00ff00;
+  }
+  80% {
+    content: 'M$nu *tEm';
+    color: #ffff00;
+  }
+  90% {
+    content: 'mm nu *tEm';
+    color: #ff7f00;
+  }
+  100% {
+    content: 'MenU ItEm';
+    color: #ff0000;
+  }
+}

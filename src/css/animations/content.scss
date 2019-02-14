@@ -1,0 +1,17 @@
+@keyframes alphabet-changing {
+  0% {
+    content: 'A $ C D E F G I H 3 K L';
+  }
+  25% {
+    content: 'A 3 C D E F G H I J K L';
+  }
+  50% {
+    content: 'A B C D E ! G I H ! K L';
+  }
+  75% {
+    content: 'A B C D E F G H I J K L';
+  }
+  100% {
+    content: '@ 8 C D E 7 G I H ! { L';
+  }
+}

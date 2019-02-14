@@ -1,0 +1,50 @@
+.menu {
+  position: fixed;
+  left: 1.5rem;
+  top: 1.5rem;
+  width: 12rem;
+  &__inner {
+    @extend %stripes;
+    padding: 1.5rem;
+    &:hover {
+      background-position: right 5rem;
+    }
+  }
+  &__item {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding-bottom: 0.4rem;
+    letter-spacing: 0.1rem;
+    color: var(--colorWhite);
+    &:hover {
+      cursor: pointer;
+      &:before {
+        animation: menu-hover 1.2s infinite;
+      }
+    }
+    &:nth-child(1) {
+      &:before {
+        content: 'Home';
+      }
+    }
+    &:nth-child(2) {
+      &:before {
+        content: 'More articles';
+      }
+    }
+    &:nth-child(3) {
+      &:before {
+        content: 'News';
+      }
+    }
+    &:nth-child(4) {
+      &:before {
+        content: 'Contact';
+      }
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}

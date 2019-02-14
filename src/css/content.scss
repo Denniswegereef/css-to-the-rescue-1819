@@ -1,0 +1,71 @@
+.content {
+  max-width: 70rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template: auto 5rem auto 10rem auto / repeat(auto-fit, minmax(0, 1fr));
+  column-gap: 1.5em;
+  padding-bottom: 10rem;
+  &__title {
+    font-weight: 500;
+    text-align: right;
+    font-size: 2rem;
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+  }
+  &__highlight {
+    background-color: var(--mainColor);
+  }
+  &__text {
+    color: var(--colorWhite);
+    &-intro {
+      display: block;
+      font-weight: bold;
+      padding-bottom: 1rem;
+    }
+    &-one {
+      grid-column: 3 / 7;
+      grid-row: 3 / 6;
+      text-align: right;
+      &:after {
+        animation: alphabet-changing 2s infinite;
+        margin-top: 2rem;
+        line-height: 4rem;
+        font-family: 'Poppins', sans-serif;
+        color: var(--colorWhite);
+        font-size: 3rem;
+        font-weight: bold;
+        letter-spacing: 0.8rem;
+        display: block;
+        content: 'A B C D E F G H I J K L';
+      }
+    }
+    &-two {
+      text-align: left;
+      grid-column: 7 / 11;
+      grid-row: 5 / 6;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: -11rem;
+        left: 0;
+        height: 12rem;
+        width: 8rem;
+        background-image: url('../img/drake.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: -5.7rem;
+        left: 0;
+        height: 1.5rem;
+        width: 8rem;
+        background-color: black;
+        transform: rotate(8deg);
+      }
+    }
+  }
+}
