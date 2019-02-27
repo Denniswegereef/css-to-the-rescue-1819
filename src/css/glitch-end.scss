@@ -1,0 +1,38 @@
+.glitch-end {
+  cursor: progress;
+  min-height: 200rem;
+  background-color: var(--colorWhite);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  &__title {
+    max-width: 20rem;
+    padding-bottom: 5rem;
+    color: var(--colorBlack);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    text-align: center;
+    font-size: 1.6rem;
+    &:before {
+      content: '';
+      height: 5rem;
+      width: 5rem;
+      background-color: var(--mainColor);
+      position: absolute;
+      top: -3.6rem;
+      right: -3.3rem;
+    }
+    &:after {
+      content: '';
+      height: 3rem;
+      width: 3rem;
+      position: absolute;
+      top: -4rem;
+      right: -3.7rem;
+      background-image: url(../img/g-trees.png);
+      background-size: 50%;
+      animation: background-size-it 0.5s infinite steps(4, end) reverse;
+    }
+  }
+}

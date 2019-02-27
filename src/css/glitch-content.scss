@@ -1,9 +1,90 @@
 .glitch-content {
   min-height: 60rem;
-  &__text {
+  cursor: progress;
+  transform: translateY(-20rem);
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20%;
+    height: 50rem;
+    width: 2rem;
+    background-color: var(--colorWhite);
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10%;
+    height: 50rem;
+    width: 6rem;
+    background-color: var(--mainColor);
+    border-left: 1rem;
+    animation: block 1.5s infinite steps(13) alternate-reverse;
+  }
+  &__text-one {
     padding-top: 5rem;
-    max-width: 40rem;
+    max-width: 30rem;
     margin: 0 auto;
     color: var(--colorWhite);
+    transform: translateX(50%);
+    z-index: -10;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 20%;
+      height: 20rem;
+      width: 8rem;
+      background-color: var(--colorBlack);
+    }
+  }
+  &__text-two {
+    color: var(--colorWhite);
+    width: 20rem;
+    margin: 0 auto;
+    &:before {
+      content: '';
+      position: absolute;
+      left: -30%;
+      top: -20%;
+      height: 10rem;
+      width: 10rem;
+      background-image: url('../img/g-lines-two.png');
+      animation: block 1.5s infinite steps(13) alternate-reverse;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      right: 40%;
+      top: 20%;
+      height: 10rem;
+      width: 10rem;
+      background-image: url('../img/g-lines.png');
+    }
+  }
+  &__title {
+    text-align: right;
+    margin-left: 40%;
+    position: relative;
+    max-width: 40rem;
+    transform: translateY(-7rem);
+    &:before {
+      text-align: left;
+      position: absolute;
+      top: 1.5rem;
+      right: 0.7rem;
+      content: attr(data-text);
+      opacity: 0.7;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 20%;
+      height: 20rem;
+      width: 8rem;
+      background-color: var(--colorBlack);
+    }
   }
 }

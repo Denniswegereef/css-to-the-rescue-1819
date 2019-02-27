@@ -15,3 +15,59 @@
     content: '@ 8 C D E 7 G I H ! { L';
   }
 }
+
+@keyframes padding-flip {
+  0% {
+    padding: 2.5rem;
+    background-color: var(--colorWhite);
+    color: var(--colorBlack);
+  }
+  25% {
+    padding: 8 1rem 10rem 2rem;
+    color: var(--colorWhite);
+    background-color: var(--colorBlack);
+  }
+  50% {
+    padding: 1rem 3rem 2rem 2;
+    background-color: var(--colorWhite);
+    color: var(--colorBlack);
+  }
+  75% {
+    padding: 3rem 1rem 4rem 1rem;
+    color: var(--mainColor);
+    background-color: var(--colorBlack);
+  }
+  100% {
+    padding: 1rem 2.5rem 10rem 2rem;
+    background-color: var(--colorWhite);
+    color: var(--colorBlack);
+  }
+}
+
+@keyframes drake-left {
+  from {
+    left: -3rem;
+    transform: rotateY(540deg) rotate(0deg) rotateZ(10deg);
+    filter: hue-rotate(270deg);
+  }
+
+  to {
+    left: -1rem;
+    transform: rotateY(540deg) rotate(5deg);
+    filter: hue-rotate(40deg);
+  }
+}
+
+@keyframes drake-right {
+  from {
+    left: 8rem;
+    transform: rotate(15deg);
+    filter: hue-rotate(300deg);
+  }
+
+  to {
+    transform: rotate(20deg);
+    filter: hue-rotate(90deg);
+    left: 6rem;
+  }
+}

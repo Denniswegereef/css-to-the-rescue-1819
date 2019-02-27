@@ -1,17 +1,24 @@
 import './css/x-app.scss'
 
-//
-// let colorWhite = '#fff'
-// let colorBlack = '#000'
-//
-// setInterval(function() {
-//   flickr(Math.floor(Math.random() * 10) + 1)
-// }, 1000)
-//
-// function flickr(number) {
-//   console.log(number)
-//   setTimeout(function() {
-//     root.style.setProperty('--colorWhite', colorWhite)
-//     root.style.setProperty('--colorBlack', colorBlack)
-//   }, number * 1000)
-// }
+let colorWhite = '#fff'
+let colorBlack = '#000'
+
+let switchDay = document.getElementById('changeOne')
+let switchNight = document.getElementById('changeTwo')
+
+const night = () => {
+  let root = document.body
+
+  root.style.setProperty('--colorWhite', colorWhite)
+  root.style.setProperty('--colorBlack', colorBlack)
+}
+
+const day = () => {
+  let root = document.body
+
+  root.style.setProperty('--colorWhite', colorBlack)
+  root.style.setProperty('--colorBlack', colorWhite)
+}
+
+switchDay.addEventListener('click', day)
+switchNight.addEventListener('click', night)

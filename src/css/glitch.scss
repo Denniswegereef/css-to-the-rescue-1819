@@ -4,6 +4,7 @@
 }
 
 .glitch {
+  cursor: progress;
   height: 80rem;
   width: 100%;
   display: grid;
@@ -19,7 +20,7 @@
     grid-row: 6 / 20;
     //background-image: url('../img/gravel.png');
     filter: saturate(20) hue-rotate(180deg) brightness(1.2);
-    animation: glitch-one 10.2s infinite steps(47, end);
+    animation: glitch-one 4.2s infinite steps(47, end);
     img {
       max-width: 100%;
       max-height: 100%;
@@ -32,7 +33,7 @@
       transform: translateY(-100%);
       left: 3rem;
       background-image: url('../img/g-building-cut.png');
-      animation: glitch-one 15.2s infinite steps(17, end);
+      animation: glitch-one 8.2s infinite steps(17);
     }
     &:after {
       overflow: hidden;
@@ -48,12 +49,19 @@
       background-repeat: repeat-x;
       background-size: 3px 100%;
     }
+    &:hover {
+      &:after {
+        animation: glitch-one 0.6s infinite steps(9);
+        transform: rotateY(180deg);
+      }
+    }
   }
   &-two {
     grid-column: 4 / 10;
     grid-row: 10 / 22;
-    animation: glitch-two 12.2s infinite steps(40, end);
+    animation: glitch-two 5.2s infinite steps(40, end);
     &:before {
+      transition: all 0.1s;
       overflow: hidden;
       content: '';
       top: 20%;
@@ -73,20 +81,33 @@
       height: 40rem;
       width: 1rem;
       transform: translateY(20%);
-      left: 4rem;
+      left: 0;
       bottom: 0;
       background-color: var(--colorBlack);
       font-family: 'Poppins', sans-serif;
       font-weight: bold;
       line-height: 0.7;
       color: var(--colorBlack);
+      animation: block 1.5s infinite steps(13) alternate-reverse;
+    }
+    &:hover {
+      &:before {
+        top: 24%;
+        left: 22%;
+        max-width: 140px;
+        transform: rotateY(180deg) scale(1.3);
+        background-repeat: no-repeat;
+      }
+      ~ .glitch-three {
+        transform: translateX(-2rem);
+      }
     }
   }
   &-three {
     grid-column: 8 / 11;
     grid-row: 1 / 14;
     background-color: green;
-    animation: glitch-four 20.2s infinite steps(15, end) alternate-reverse;
+    animation: glitch-four 9.2s infinite steps(15, end) alternate-reverse;
     img {
       height: 100%;
     }
@@ -104,7 +125,7 @@
     grid-column: 10 / 13;
     grid-row: 3 / 20;
     background-color: pink;
-    animation: glitch-four 10.2s infinite steps(23, end);
+    animation: glitch-four 4.2s infinite steps(23, end);
     &:before {
       top: 0;
       @extend %content;
@@ -136,7 +157,11 @@
     grid-column: 13 / 18;
     grid-row: 13 / 19;
     background-color: purple;
-    animation: glitch-one 18.5s infinite steps(33, end);
+    filter: hue-rotate(180deg);
+    animation: block 1.5s infinite steps(33, end);
+    &:hover {
+      animation: block 1.5s infinite steps(33, end);
+    }
   }
   &-seven {
     grid-column: 15 / 16;
@@ -157,9 +182,11 @@
     grid-column: 16 / 20;
     grid-row: 10 / 21;
     background-color: blue;
-    animation: glitch-four 20.2s infinite steps(15, end) alternate-reverse;
-
+    animation: glitch-four 3.2s infinite steps(15, end) alternate-reverse;
     z-index: 10;
+    &:hover {
+      animation: glitch-four 0.2s infinite steps(4, end) alternate-reverse;
+    }
     // filter: saturate(4) hue-rotate(20deg) brightness(2.2) contrast(4);
   }
   &-nine {
@@ -208,7 +235,16 @@
       left: -3rem;
       bottom: 0;
       background-color: lightgreen;
+      animation: block 1.5s infinite steps(13) alternate-reverse;
       background-image: url('../img/g-building-cut.png');
+    }
+
+    &:hover {
+      background-color: red;
+      &:before {
+        background-image: url('../img/transparant.png');
+        background-size: 7%;
+      }
     }
   }
   &-twelve {

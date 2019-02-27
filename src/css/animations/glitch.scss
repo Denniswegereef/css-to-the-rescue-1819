@@ -1,55 +1,55 @@
-// @keyframes glitch-one {
-//   0% {
-//     filter: saturate(20) hue-rotate(180deg) brightness(4);
-//   }
-//   50% {
-//     filter: saturate(20) hue-rotate(180deg) brightness(1.2);
-//   }
-//   100% {
-//     filter: saturate(20) hue-rotate(180deg) brightness(4);
-//   }
-// }
-//
-// @keyframes glitch-two {
-//   0% {
-//     filter: saturate(2) hue-rotate(240deg) brightness(2);
-//   }
-//
-//   50% {
-//     filter: saturate(2.1) hue-rotate(250deg) brightness(2.6);
-//   }
-//
-//   100% {
-//     filter: saturate(3) hue-rotate(230deg) brightness(4);
-//   }
-// }
-//
-// @keyframes glitch-four {
-//   0% {
-//     filter: saturate(3) brightness(1.5);
-//   }
-//   100% {
-//     filter: saturate(2) brightness(3.2);
-//   }
-// }
-//
-// @keyframes glitch-six {
-//   0% {
-//     filter: saturate(4) brightness(1.2);
-//   }
-//   100% {
-//     filter: saturate(10) hue-rotate(100deg) brightness(10);
-//   }
-// }
-//
-// @keyframes glitch-ten {
-//   0% {
-//     filter: hue-rotate(180deg);
-//   }
-//   50% {
-//     filter: hue-rotate(20deg);
-//   }
-//   100% {
-//     filter: hue-rotate(200deg);
-//   }
-// }
+@keyframes glitch-one {
+  0% {
+    filter: saturate(20) hue-rotate(180deg) brightness(4);
+  }
+  50% {
+    filter: saturate(20) hue-rotate(140deg) brightness(1.2);
+  }
+  100% {
+    filter: saturate(20) hue-rotate(180deg) brightness(4);
+  }
+}
+
+@keyframes glitch-two {
+  0% {
+    filter: saturate(2) hue-rotate(240deg) brightness(2);
+  }
+
+  50% {
+    filter: saturate(2.1) hue-rotate(250deg) brightness(2.6);
+  }
+
+  100% {
+    filter: saturate(3) hue-rotate(230deg) brightness(4);
+  }
+}
+
+@keyframes glitch-four {
+  0% {
+    filter: saturate(3) brightness(1.5);
+  }
+  100% {
+    filter: saturate(2) brightness(3.2);
+  }
+}
+
+@keyframes glitch-six {
+  0% {
+    filter: saturate(4) brightness(1.2);
+  }
+  100% {
+    filter: saturate(10) hue-rotate(100deg) brightness(10);
+  }
+}
+
+@keyframes glitch-ten {
+  0% {
+    filter: hue-rotate(180deg);
+  }
+  50% {
+    filter: hue-rotate(20deg);
+  }
+  100% {
+    filter: hue-rotate(200deg);
+  }
+}

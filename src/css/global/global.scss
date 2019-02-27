@@ -23,3 +23,9 @@ p {
     transform: rotateY(0deg);
   }
 }
+
+body {
+  overflow: auto;
+  cursor: url(../img/cursor-two.png) 4 12, auto;
+  overflow-x: hidden;
+}

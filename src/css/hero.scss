@@ -14,8 +14,70 @@
     line-height: 1;
     font-size: 4.5rem;
     margin-bottom: 4rem;
+    position: relative;
+    z-index: 10;
+    perspective: 1000px;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: attr(data-text);
+      color: var(--colorWhite);
+    }
+    &:before {
+      color: var(--colorWhite);
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: attr(data-text);
+    }
+    &:hover {
+      cursor: not-allowed;
+      @extend %stripes;
+      animation: change-stripe 2s infinite alternate-reverse;
+
+      color: var(--mainColor);
+      &:after {
+        animation: space-colors steps(3) 0.5s infinite alternate-reverse;
+      }
+      &:before {
+        color: var(--colorWhiteOpacity);
+        animation: space-colors-two steps(2) 1s infinite alternate-reverse;
+      }
+
+      ~ .hero__text {
+        transform: translateX(-1rem);
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 10rem;
+          height: 50rem;
+          width: 5rem;
+          animation: block steps(6) 1s infinite alternate-reverse;
+          background-color: var(--colorBlack);
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          top: 5rem;
+          left: 15rem;
+          height: 30rem;
+          width: 2rem;
+          animation: block steps(8) 3s infinite alternate-reverse;
+          background-color: var(--colorBlack);
+        }
+      }
+    }
+    &:active {
+      transform: rotateX(200deg) rotate(20deg);
+      font-size: 6rem;
+    }
   }
   &__text {
+    transition: all 0.3s;
     grid-area: 3 / 9 / 5 / 12;
     z-index: 10;
     color: var(--colorWhite);
@@ -27,6 +89,7 @@
     min-height: 40rem;
     grid-area: 4 / 6 / 6 / 10;
     &:after {
+      transition: all 0.1s;
       position: absolute;
       content: '';
       top: 25rem;
@@ -35,12 +98,29 @@
       width: 3rem;
       background-color: var(--mainColor);
     }
+    &:before {
+      position: absolute;
+      content: '';
+      top: 25rem;
+      right: -5rem;
+    }
+    &:hover {
+      &:after {
+        animation: block steps(6) 1s infinite alternate-reverse;
+        background-color: var(--colorBlack);
+      }
+      &:before {
+        z-index: 99;
+        background-color: var(--colorBlack);
+        animation: block steps(6) 1.2s infinite alternate;
+      }
+    }
     &-inner {
       position: relative;
       background-color: #fff;
       overflow: hidden;
       &:before {
-        animation: change-color 10s infinite alternate;
+        animation: change-color 3s steps(5) infinite alternate;
         mix-blend-mode: lighten;
         opacity: 1.2;
         content: '';
@@ -59,6 +139,19 @@
       width: 100%;
       object-fit: cover;
     }
+    &:hover {
+      .hero__image-inner {
+        &:before {
+          mix-blend-mode: color-dodge;
+        }
+      }
+    }
+    &:active {
+      mix-blend-mode: difference;
+      transform: translateX(2rem);
+      transform: rotateY(180deg);
+      animation-duration: 0.1s;
+    }
   }
 
   &__stripes {
@@ -68,5 +161,11 @@
     grid-area: 5 / 5 / 8 / 7;
     @extend %stripes;
     animation: change-stripe 2s infinite alternate-reverse;
+    &:hover {
+      background-color: var(--mainColor);
+      background-position: 10rem;
+      background-position: right 2rem bottom 3rem;
+      transform: rotate(-2deg);
+    }
   }
 }

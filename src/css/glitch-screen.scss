@@ -1,0 +1,124 @@
+@keyframes glitch-before {
+  0% {
+    top: 50%;
+    left: 10%;
+    height: 4%;
+    width: 80%;
+  }
+
+  20% {
+    top: 10%;
+    left: 10%;
+    height: 20%;
+    width: 80%;
+  }
+  40% {
+    top: 0%;
+    left: 37%;
+    height: 3%;
+    width: 100%;
+  }
+  60% {
+    top: 80%;
+    left: 0%;
+    height: 10%;
+    width: 100%;
+  }
+  80% {
+    top: 20%;
+    left: 0%;
+    height: 8%;
+    width: 40%;
+  }
+  100% {
+    top: 80%;
+    left: 0%;
+    height: 3%;
+    width: 70%;
+  }
+}
+
+@keyframes glitch-after {
+  0% {
+    top: 20%;
+    left: 10%;
+    height: 4%;
+    width: 80%;
+  }
+
+  20% {
+    top: 80%;
+    left: 10%;
+    height: 20%;
+    width: 100%;
+  }
+  40% {
+    top: 0%;
+    left: 80%;
+    height: 3%;
+    width: 100%;
+  }
+  60% {
+    top: 33%;
+    left: 0%;
+    height: 10%;
+    width: 100%;
+  }
+  80% {
+    top: 43%;
+    left: 80%;
+    height: 8%;
+    width: 100%;
+  }
+  100% {
+    top: 0%;
+    left: 10%;
+    height: 3%;
+    width: 70%;
+  }
+}
+
+.glitch-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  &:before,
+  &:after {
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.glitch-content,
+.glitch,
+.glitch-content-white .glitch-end {
+  &:active {
+    ~ .glitch-screen {
+      height: 100vh;
+      width: 100vw;
+      z-index: 999;
+      &:before {
+        animation: glitch-before steps(7) 1.5s infinite alternate-reverse;
+        background-color: var(--colorBlack);
+        height: 20rem;
+        width: 20rem;
+      }
+
+      &:after {
+        animation: glitch-after steps(5) 1.5s infinite;
+        background-color: var(--colorBlack);
+        height: 20rem;
+        width: 20rem;
+      }
+    }
+  }
+}
+
+body {
+  ~ .section-one {
+  }
+}

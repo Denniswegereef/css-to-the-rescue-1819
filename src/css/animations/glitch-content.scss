@@ -1,0 +1,49 @@
+@keyframes background-size-it {
+  from {
+    background-size: 20%;
+  }
+
+  to {
+    background-size: 10%;
+  }
+}
+
+@keyframes change-positions {
+  25% {
+    top: 170rem;
+    left: -10rem;
+  }
+
+  50% {
+    top: 120rem;
+    left: 10rem;
+  }
+
+  75% {
+    top: 130rem;
+    left: -20rem;
+  }
+
+  80% {
+    top: 150rem;
+    left: 0;
+  }
+}
+
+@keyframes trans-it {
+  25% {
+    background-size: 12%;
+  }
+
+  50% {
+    background-size: 10%;
+  }
+
+  75% {
+    background-size: 3%;
+  }
+
+  100% {
+    background-size: 6%;
+  }
+}

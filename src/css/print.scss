@@ -1,0 +1,229 @@
+$defaultPadding: 0.5rem;
+$fontSize: 1rem;
+$headerSize: 2rem;
+
+@media print {
+  body {
+    margin: 0.5cm 1.5cm;
+  }
+
+  // * {
+  //   font-size: 1rem !important;
+  //   line-height: auto !important;
+  //   color: black !important;
+  // }
+  // * {
+  //   margin: 0;
+  //   padding: 0;
+  //   display: block;
+  //   position: relative;
+  //   transform: rotate(0deg) translateX(0) translateY(0) !important;
+  //   &:before {
+  //     content: none;
+  //   }
+  //   &:after {
+  //     content: none;
+  //   }
+  // }
+
+  .glitch {
+    display: none;
+  }
+  .hero {
+    padding: 0;
+    margin: 0;
+    display: block;
+    &__header {
+      text-align: left;
+      width: 100%;
+      font-size: $headerSize;
+      color: red;
+      margin-bottom: $defaultPadding * 4;
+      &:after,
+      &:before {
+        content: none;
+      }
+    }
+    &__stripes {
+      display: none;
+    }
+    &__image {
+      display: none;
+      filter: none;
+    }
+    &__text {
+      color: purple;
+      padding: 0;
+      margin: 0;
+      //margin-bottom: $defaultPadding * 4;
+    }
+  }
+
+  .menu,
+  .switch {
+    display: none;
+  }
+
+  .content {
+    padding: 0;
+    margin: 0;
+    display: block;
+    text-align: left;
+    &__title {
+      margin: 0;
+      padding: 0;
+      color: orange;
+      font-size: $headerSize;
+      text-align: left;
+      line-height: auto;
+      //padding-bottom: $defaultPadding * 4;
+    }
+
+    &__text {
+      color: green;
+      span {
+        margin: 0;
+        padding: 0;
+        color: magenta;
+      }
+      &-one {
+        text-align: left;
+        &:after {
+          content: none;
+          font-size: 0rem;
+          line-height: 0;
+          margin: 0;
+          padding: 0;
+        }
+      }
+      &-two {
+        &:after {
+          content: none;
+        }
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
+  .glitch-content {
+    display: block;
+    padding: 0;
+    margin: 0;
+    transform: translateX(0) translateY(0);
+    min-height: 1rem;
+    &:after,
+    &:before {
+      content: none;
+    }
+    &__text-one {
+      width: 100%;
+      display: block;
+      margin: 0;
+      padding: 0;
+      transform: translateX(0);
+      text-align: left;
+      max-width: 100%;
+      color: red;
+      &:after,
+      &:before {
+        content: none;
+      }
+    }
+    &__text-two {
+      color: skyblue;
+      display: block;
+      margin: 0;
+      padding: 0;
+      transform: translateX(0);
+      text-align: left;
+      height: auto;
+      width: 100%;
+      &:after,
+      &:before {
+        content: none;
+      }
+    }
+
+    &__title {
+      color: brown;
+      font-size: 1.5rem;
+      transform: translateY(0);
+      width: 100%;
+      text-align: left;
+      position: relative;
+      margin: 0;
+      max-width: 100%;
+      line-height: auto;
+      font-size: $headerSize;
+      &:after,
+      &:before {
+        content: none;
+      }
+    }
+  }
+  .glitch-content-white {
+    min-height: 1.5rem;
+    padding: 0;
+    margin: 0;
+
+    &:after,
+    &:before {
+      content: none;
+    }
+
+    &__text {
+      position: relative;
+      transform: rotate(0deg);
+      width: 100%;
+      max-width: 100%;
+      text-align: left;
+      color: red;
+      font-size: $fontSize;
+      line-height: $fontSize;
+      &:before {
+        content: none;
+      }
+      &:after {
+        content: none;
+      }
+    }
+    &__title {
+      &-one {
+        color: blue;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-size: $fontSize;
+        transform: translateY(0);
+        line-height: $fontSize;
+        &:after,
+        &:before {
+          content: none;
+        }
+      }
+      &-two {
+        transform: rotate(0deg);
+        color: yellow;
+        opacity: 1;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-size: $fontSize;
+        line-height: $fontSize;
+      }
+    }
+    &__extra,
+    &__extra-one,
+    &__extra-two,
+    &__extra-three {
+      display: none;
+    }
+  }
+  .glitch-end {
+    display: none;
+    min-height: 1rem;
+  }
+}

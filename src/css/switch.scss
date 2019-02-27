@@ -1,0 +1,16 @@
+.switch {
+  position: fixed;
+  top: 0;
+  right: 0;
+  button {
+    border: 0;
+    color: var(--colorWhite);
+    padding: 0.4rem;
+    background: none;
+    cursor: pointer;
+    &:hover {
+      color: var(--colorBlack);
+      background-color: var(--colorWhite);
+    }
+  }
+}
