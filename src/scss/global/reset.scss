@@ -24,3 +24,13 @@ ul {
 ul {
   list-style: none;
 }
+
+@media screen and (max-width: 600px) {
+  * {
+    animation-name: none !important;
+  }
+  *:before,
+  *:after {
+    animation-name: none !important;
+  }
+}
