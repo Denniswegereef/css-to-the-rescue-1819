@@ -80,3 +80,36 @@
     height: 0.2rem;
   }
 }
+
+@keyframes block-three {
+  0% {
+    top: 10rem;
+    width: 200rem;
+    height: 2rem;
+  }
+
+  25% {
+    top: 100%;
+    width: 10rem;
+    height: 4rem;
+  }
+
+  50% {
+    top: -10rem;
+    transform: translateY(1rem);
+    width: 200rem;
+    height: 1rem;
+  }
+
+  75% {
+    top: 0;
+    width: 3rem;
+    height: 15rem;
+  }
+
+  100% {
+    transform: translateY(3rem);
+    width: 200rem;
+    height: 0.2rem;
+  }
+}

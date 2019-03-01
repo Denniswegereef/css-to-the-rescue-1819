@@ -1,5 +1,4 @@
 .glitch-content-white {
-  min-height: 80rem;
   cursor: progress;
   background-color: #fff;
   width: 100%;
@@ -32,14 +31,15 @@
       line-height: 3rem;
       font-size: 9rem;
       position: relative;
-      &:after {
+      opacity: 0.9;
+      &:before {
         content: '';
-        height: 40rem;
-        width: 4rem;
-        background-color: var(--colorWhite);
-        top: -10rem;
-        left: 20rem;
         position: absolute;
+        height: 100vw;
+        height: 40rem;
+        background-color: red;
+        top: 0;
+        left: 0;
       }
     }
     &-two {
@@ -84,7 +84,6 @@
     background-color: var(--colorBlack);
     width: 13rem;
     transform: translateY(-10rem);
-
     &:before {
       content: '';
       position: absolute;
@@ -177,5 +176,16 @@
         }
       }
     }
+  }
+
+  &__glitchy {
+    content: '';
+    height: 40rem;
+    width: 4rem;
+    top: 0;
+    background-color: var(--colorBlack);
+    left: 0;
+    position: absolute;
+    animation: block-three 1s steps(8) infinite alternate-reverse;
   }
 }

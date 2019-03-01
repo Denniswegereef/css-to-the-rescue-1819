@@ -7,25 +7,6 @@ $headerSize: 2rem;
     margin: 0.5cm 1.5cm;
   }
 
-  // * {
-  //   font-size: 1rem !important;
-  //   line-height: auto !important;
-  //   color: black !important;
-  // }
-  // * {
-  //   margin: 0;
-  //   padding: 0;
-  //   display: block;
-  //   position: relative;
-  //   transform: rotate(0deg) translateX(0) translateY(0) !important;
-  //   &:before {
-  //     content: none;
-  //   }
-  //   &:after {
-  //     content: none;
-  //   }
-  // }
-
   .glitch {
     display: none;
   }
@@ -37,7 +18,8 @@ $headerSize: 2rem;
       text-align: left;
       width: 100%;
       font-size: $headerSize;
-      color: red;
+      line-height: $headerSize;
+      color: var(--colorBlack);
       margin-bottom: $defaultPadding * 4;
       &:after,
       &:before {
@@ -48,13 +30,40 @@ $headerSize: 2rem;
       display: none;
     }
     &__image {
-      display: none;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      filter: none;
+      &:before,
+      &:after {
+        content: none;
+      }
+      &-inner {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        overflow: auto;
+        filter: none;
+        &:before,
+        &:after {
+          content: none;
+        }
+      }
+    }
+    img {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      height: 10cm;
       filter: none;
     }
     &__text {
-      color: purple;
+      color: var(--colorBlack);
       padding: 0;
       margin: 0;
+      margin-bottom: $defaultPadding * 4;
+      line-height: $fontSize * 2;
+      font-size: $fontSize;
       //margin-bottom: $defaultPadding * 4;
     }
   }
@@ -72,19 +81,23 @@ $headerSize: 2rem;
     &__title {
       margin: 0;
       padding: 0;
-      color: orange;
+      color: var(--colorBlack);
       font-size: $headerSize;
+      line-height: $headerSize;
+      margin-bottom: $defaultPadding * 4;
       text-align: left;
-      line-height: auto;
       //padding-bottom: $defaultPadding * 4;
     }
 
     &__text {
-      color: green;
+      margin-bottom: $defaultPadding * 4;
+      line-height: $fontSize * 2;
+      font-size: $fontSize;
+      color: var(--colorBlack);
       span {
         margin: 0;
         padding: 0;
-        color: magenta;
+        color: var(--colorBlack);
       }
       &-one {
         text-align: left;
@@ -124,14 +137,16 @@ $headerSize: 2rem;
       transform: translateX(0);
       text-align: left;
       max-width: 100%;
-      color: red;
+      line-height: $fontSize * 2;
+      font-size: $fontSize;
+      color: var(--colorBlack);
       &:after,
       &:before {
         content: none;
       }
     }
     &__text-two {
-      color: skyblue;
+      color: var(--colorBlack);
       display: block;
       margin: 0;
       padding: 0;
@@ -139,6 +154,8 @@ $headerSize: 2rem;
       text-align: left;
       height: auto;
       width: 100%;
+      line-height: $fontSize * 2;
+      font-size: $fontSize;
       &:after,
       &:before {
         content: none;
@@ -146,16 +163,16 @@ $headerSize: 2rem;
     }
 
     &__title {
-      color: brown;
-      font-size: 1.5rem;
+      margin-bottom: $defaultPadding * 4;
+      line-height: $fontSize;
+      font-size: $fontSize;
       transform: translateY(0);
       width: 100%;
       text-align: left;
       position: relative;
       margin: 0;
       max-width: 100%;
-      line-height: auto;
-      font-size: $headerSize;
+      color: var(--colorBlack);
       &:after,
       &:before {
         content: none;
@@ -178,9 +195,11 @@ $headerSize: 2rem;
       width: 100%;
       max-width: 100%;
       text-align: left;
-      color: red;
+      color: var(--colorBlack);
+      margin: 0;
+      padding: 0;
       font-size: $fontSize;
-      line-height: $fontSize;
+      line-height: $fontSize * 2;
       &:before {
         content: none;
       }
@@ -190,29 +209,22 @@ $headerSize: 2rem;
     }
     &__title {
       &-one {
-        color: blue;
+        margin-bottom: $defaultPadding * 4;
+        line-height: $fontSize * 2;
+        font-size: $fontSize;
         position: relative;
         margin: 0;
         padding: 0;
         width: 100%;
-        font-size: $fontSize;
         transform: translateY(0);
-        line-height: $fontSize;
+        color: var(--colorBlack);
         &:after,
         &:before {
           content: none;
         }
       }
       &-two {
-        transform: rotate(0deg);
-        color: yellow;
-        opacity: 1;
-        position: relative;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        font-size: $fontSize;
-        line-height: $fontSize;
+        display: none;
       }
     }
     &__extra,

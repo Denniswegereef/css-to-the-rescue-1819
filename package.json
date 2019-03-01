@@ -4,6 +4,9 @@
   "description": "_This course is in English_",
   "private": true,
   "devDependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.10",
     "parcel-bundler": "^1.11.0",
     "sass": "^1.17.0",
     "webpack": "^4.28.3",
@@ -13,7 +16,11 @@
     "format": "prettier --write \"src/**/*.js\"",
     "xo": "xo",
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html",
+    "sass": "node_modules/.bin/node-sass --include-path scss src/scss/x-app.scss src/css/main.css",
+    "sass-watch": "node_modules/.bin/nodemon -e scss -x npm run sass",
+    "server": "node_modules/.bin/live-server .",
+    "watch": "npm run sass-watch & npm run server"
   },
   "prettier": {
     "semi": false,

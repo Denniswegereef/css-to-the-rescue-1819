@@ -1,5 +1,3 @@
-import './css/x-app.scss'
-
 let colorWhite = '#fff'
 let colorBlack = '#000'
 
